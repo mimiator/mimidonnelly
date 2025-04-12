@@ -8,7 +8,7 @@ html, body {
   background-color: #ffffff;
   color: #000000;
   font-family: "Times New Roman", serif;
-  overflow: hidden; /* prevent page scroll */
+  overflow: hidden;
 }
 
 .container {
@@ -17,12 +17,11 @@ html, body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
 }
 
 .logo {
   width: 100%;
-  max-width: 600px;
+  max-width: 500px;
   margin: 20px 0 5px 20px;
   display: block;
   text-align: left;
@@ -30,14 +29,14 @@ html, body {
 
 .image-scroll {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   overflow-x: auto;
+  flex-grow: 1;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   margin: 0;
   padding: 0;
-  flex-grow: 1;
 }
 
 .image-scroll img {
@@ -46,6 +45,7 @@ html, body {
   flex: 0 0 auto;
   scroll-snap-align: center;
   object-fit: cover;
+  margin: 0;
   border: none;
 }
 
@@ -53,20 +53,20 @@ footer {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 10;
+  z-index: 1000;
   background: white;
-  padding: 10px 0 0;
+  padding: 5px 0 0;
 }
 
 .footer-links {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 14px;
+  gap: 10px;
 }
 
 .footer-links a {
-  font-size: 2.8rem;
+  font-size: 1.6rem; /* Smaller than before */
   text-decoration: none;
   color: #000000;
   font-weight: bold;
@@ -75,6 +75,6 @@ footer {
 }
 
 .linkedin-icon {
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
 }
