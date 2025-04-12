@@ -8,7 +8,7 @@ html, body {
   background-color: #ffffff;
   color: #000000;
   font-family: "Times New Roman", serif;
-  overflow: hidden; /* Prevent unwanted scrollbars */
+  overflow: hidden;
 }
 
 .container {
@@ -17,48 +17,27 @@ html, body {
   height: 100vh;
 }
 
+/* ─── HEADER: logo + links ───────────────── */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
 .logo {
   max-width: 500px;
-  margin: 20px 0 5px 20px;
+  width: 100%;
 }
 
-.image-scroll {
-  display: flex;
-  flex-direction: row-reverse; /* 👈 reverses scroll order */
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  flex-grow: 1;
-  padding: 0;
-}
-
-.image-scroll img {
-  width: 100vw;
-  height: auto;
-  flex: 0 0 auto;
-  scroll-snap-align: center;
-  object-fit: cover;
-  border: none;
-  margin: 0;
-}
-
-footer {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
-  background: white;
-}
-
-.footer-links {
+.header-links {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 8px;
 }
 
-.footer-links a {
+.header-links a {
   font-size: 1.4rem;
   text-decoration: none;
   color: #000000;
@@ -70,4 +49,26 @@ footer {
 .linkedin-icon {
   height: 28px;
   width: 28px;
+}
+
+/* ─── SCROLL SECTION ─────────────────────── */
+.image-scroll {
+  display: flex;
+  flex-direction: row-reverse;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  flex-grow: 1;
+  padding: 0;
+}
+
+.image-scroll img {
+  max-width: 100%;
+  height: 100%;
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  object-fit: contain;
+  margin: 0;
+  border: none;
 }
