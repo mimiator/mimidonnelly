@@ -26,6 +26,15 @@
       <img src="img1.jpg" alt="Image 1" />
     </div>
 
+    <script>
+  // Scroll to the first image (img6) automatically
+  window.addEventListener("load", () => {
+    const scrollContainer = document.querySelector(".image-scroll");
+    scrollContainer.scrollLeft = scrollContainer.scrollWidth;
+  });
+</script>
+
+
     <footer>
       <div class="footer-links">
         <a href="https://www.atorintel.com" target="_blank">CONSULTATION</a>
