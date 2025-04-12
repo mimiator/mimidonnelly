@@ -8,7 +8,7 @@ html, body {
   background-color: #ffffff;
   color: #000000;
   font-family: "Times New Roman", serif;
-  overflow-x: hidden; /* ✅ allow vertical scroll if needed */
+  overflow-x: hidden;
 }
 
 .container {
@@ -77,6 +77,10 @@ html, body {
 
 /* ─── MOBILE RESPONSIVE ───────────── */
 @media (max-width: 768px) {
+  .container {
+    height: auto; /* let it scroll */
+  }
+
   .header {
     flex-direction: column;
     align-items: center;
@@ -90,8 +94,9 @@ html, body {
   }
 
   .header-links {
+    order: 3; /* ⬇️ move below scroll */
+    margin-top: 20px;
     align-items: center;
-    gap: 10px;
   }
 
   .header-links a {
@@ -101,5 +106,15 @@ html, body {
   .linkedin-icon {
     height: 24px;
     width: 24px;
+  }
+
+  .image-scroll {
+    height: 65vh; /* ⬆️ give the scroll room */
+    padding-bottom: 10px;
+  }
+
+  .image-scroll img {
+    height: 100%;
+    object-fit: contain;
   }
 }
