@@ -17,13 +17,6 @@
   <div class="container">
     <header class="header">
       <img src="logo.png" alt="Logo" class="logo" />
-      <div class="header-links">
-        <a href="https://www.atorintelligence.com" target="_blank">INTELLIGENCE</a>
-        <a href="mailto:mimi@atorintel.com">CONTACT</a>
-        <a href="https://linkedin.com/in/dmimi" target="_blank">
-          <img src="linkedin.png" alt="LinkedIn" class="linkedin-icon" />
-        </a>
-      </div>
     </header>
 
     <div class="image-scroll" id="scroll">
@@ -34,15 +27,23 @@
       <img src="img5.jpg" alt="Image 5" />
       <img src="img6.jpg" alt="Image 6" />
     </div>
+
+    <!-- Moved outside header for mobile flexibility -->
+    <div class="header-links">
+      <a href="https://www.atorintel.com" target="_blank">CONSULTATION</a>
+      <a href="mailto:mimi@atorintel.com">CONTACT</a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank">
+        <img src="linkedin.png" alt="LinkedIn" class="linkedin-icon" />
+      </a>
+    </div>
   </div>
 
- <script>
-  window.addEventListener("load", () => {
-    const el = document.getElementById("scroll");
-    el.scrollLeft = 0; // 👈 this points to Image 6 when using row-reverse
-  });
-</script>
-
-
+  <script>
+    // Start on the last image (Image 6)
+    window.addEventListener("load", () => {
+      const el = document.getElementById("scroll");
+      el.scrollLeft = el.scrollWidth;
+    });
+  </script>
 </body>
 </html>
