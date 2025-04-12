@@ -17,7 +17,7 @@
   <div class="container">
     <img src="logo.png" alt="Logo" class="logo" />
 
-    <div class="image-scroll">
+    <div class="image-scroll" id="imageScroll">
       <img src="img6.jpg" alt="Image 6" />
       <img src="img5.jpg" alt="Image 5" />
       <img src="img4.jpg" alt="Image 4" />
@@ -29,19 +29,19 @@
 
   <footer>
     <div class="footer-links">
-      <a href="https://www.atorintelligence.com" target="_blank">CONSULTATION</a>
+      <a href="https://www.atorintel.com" target="_blank">CONSULTATION</a>
       <a href="mailto:mimi@atorintel.com">CONTACT</a>
-      <a href="https://linkedin.com/in/dmimi" target="_blank">
+      <a href="https://linkedin.com/in/yourprofile" target="_blank">
         <img src="linkedin.png" alt="LinkedIn" class="linkedin-icon" />
       </a>
     </div>
   </footer>
 
-  <!-- Scroll to Image 6 (right end) -->
   <script>
+    // Force scroll to the leftmost side (image 6 in a reversed flex)
     window.addEventListener("load", () => {
-      const scrollContainer = document.querySelector(".image-scroll");
-      scrollContainer.scrollLeft = scrollContainer.scrollWidth;
+      const scrollContainer = document.getElementById("imageScroll");
+      scrollContainer.scrollLeft = 0;
     });
   </script>
 </body>
