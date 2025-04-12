@@ -5,26 +5,25 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #fff;
+  color: #000;
   font-family: "Times New Roman", serif;
   overflow-x: hidden;
   overflow-y: auto;
+  height: 100%;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  width: 100%;
+  min-height: 100%;
 }
 
 /* ─── HEADER ─── */
 .header {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
-  padding: 5px 16px 0;
+  padding: 8px 16px 0;
 }
 
 .logo {
@@ -38,13 +37,14 @@ html, body {
   display: flex;
   flex-direction: row-reverse;
   overflow-x: auto;
+  overflow-y: hidden;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  flex-grow: 1;
+  flex-shrink: 0;
+  height: 60vh;
+  margin: 0;
   padding: 0;
-  height: 55vh;
-  margin-bottom: 8px;
 }
 
 .image-scroll img {
@@ -54,7 +54,6 @@ html, body {
   object-fit: contain;
   margin: 0;
   border: none;
-  max-width: unset;
 }
 
 /* ─── LINKS ─── */
@@ -63,13 +62,14 @@ html, body {
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
-  padding: 0 16px 16px;
+  padding: 10px 16px 20px;
+  flex-shrink: 0;
 }
 
 .header-links a {
   font-size: 1.2rem;
   text-decoration: none;
-  color: #000000;
+  color: #000;
   font-weight: bold;
   text-transform: uppercase;
   line-height: 1.2;
@@ -80,12 +80,12 @@ html, body {
   width: 26px;
 }
 
-/* ─── MOBILE OPTIMIZATION ─── */
+/* ─── MOBILE ONLY ─── */
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
     align-items: flex-start;
-    gap: 6px;
+    padding: 6px 16px 0;
   }
 
   .logo {
@@ -93,14 +93,13 @@ html, body {
   }
 
   .image-scroll {
-    height: 55vh;
-    margin-bottom: 10px;
+    height: 50vh;
+    margin-bottom: 12px;
   }
 
   .header-links {
+    padding: 0 16px 24px;
     align-items: flex-start;
-    text-align: left;
-    padding: 0 16px 16px;
   }
 
   .header-links a {
