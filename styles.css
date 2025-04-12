@@ -7,27 +7,27 @@ html, body {
   padding: 0;
   background: white;
   font-family: "Times New Roman", serif;
-  height: 100%;
+  color: black;
   overflow-x: hidden;
   overflow-y: auto;
+  height: 100%;
 }
 
-/* Prevent mobile top padding from address bar */
-body {
-  padding-top: env(safe-area-inset-top);
-}
-
-/* Flex container for everything */
+/* Layout container */
 .container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   width: 100%;
+  min-height: 100vh;
 }
 
-/* ─── LOGO ─── */
+/* ─── LOGO HEADER ─── */
 .header {
-  padding: 4px 16px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0 16px; /* ✅ no top padding */
+  margin: 0;
 }
 
 .logo {
@@ -36,16 +36,19 @@ body {
   display: block;
 }
 
-/* ─── IMAGE SCROLL ─── */
+/* ─── IMAGE SCROLL SECTION ─── */
 .image-scroll {
   display: flex;
   flex-direction: row-reverse;
   overflow-x: auto;
+  overflow-y: hidden;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  height: 52vh;
+  -webkit-overflow-scrolling: touch;
+  height: 55vh; /* balanced height for mobile and desktop */
   margin: 0;
   padding: 0;
+  flex-shrink: 0;
 }
 
 .image-scroll img {
@@ -55,23 +58,26 @@ body {
   object-fit: contain;
   margin: 0;
   border: none;
+  max-width: unset;
 }
 
-/* ─── LINKS ─── */
+/* ─── MENU LINKS ─── */
 .header-links {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 6px;
-  padding: 10px 16px 16px;
+  padding: 10px 16px 20px;
+  flex-shrink: 0;
 }
 
 .header-links a {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: bold;
+  text-transform: uppercase;
   text-decoration: none;
   color: black;
-  text-transform: uppercase;
+  line-height: 1.2;
 }
 
 .linkedin-icon {
@@ -79,3 +85,35 @@ body {
   width: 22px;
 }
 
+/* ─── MOBILE OPTIMIZATION ─── */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 16px;
+  }
+
+  .logo {
+    max-width: 90%;
+  }
+
+  .image-scroll {
+    height: 50vh; /* slightly tighter for small screens */
+    margin-bottom: 12px;
+  }
+
+  .header-links {
+    align-items: flex-start;
+    text-align: left;
+    padding: 0 16px 24px;
+  }
+
+  .header-links a {
+    font-size: 1rem;
+  }
+
+  .linkedin-icon {
+    height: 20px;
+    width: 20px;
+  }
+}
