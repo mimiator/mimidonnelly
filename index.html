@@ -37,12 +37,12 @@
   </div>
 
  <script>
-  // ✅ Start at far-right side (Image 6)
   window.addEventListener("load", () => {
     const el = document.getElementById("scroll");
-    el.scrollLeft = el.scrollWidth;
+    el.scrollLeft = 0; // 👈 this points to Image 6 when using row-reverse
   });
 </script>
+
 
 </body>
 </html>
