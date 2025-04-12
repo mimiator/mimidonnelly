@@ -17,17 +17,18 @@ html, body {
   height: 100vh;
 }
 
-/* ─── HEADER: logo + links ───────────────── */
+/* ─── HEADER ───────────────────────── */
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 20px;
+  align-items: flex-start;
+  padding: 10px 20px 0 20px; /* ⬅️ less space above scroll */
 }
 
 .logo {
   max-width: 500px;
   width: 100%;
+  margin: 0;
 }
 
 .header-links {
@@ -51,7 +52,7 @@ html, body {
   width: 28px;
 }
 
-/* ─── SCROLL SECTION ─────────────────────── */
+/* ─── SCROLL AREA ─────────────────── */
 .image-scroll {
   display: flex;
   flex-direction: row-reverse;
@@ -60,7 +61,7 @@ html, body {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   flex-grow: 1;
-  padding: 0;
+  padding-bottom: 20px; /* ✅ adds breathing room at bottom */
 }
 
 .image-scroll img {
