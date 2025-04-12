@@ -10,12 +10,21 @@
   <meta property="og:title" content="Mimi Dilara Ator Donnelly" />
   <meta property="og:description" content="Explore the visual journey and creative legacy." />
   <meta property="og:image" content="preview.jpg" />
-  <meta property="og:url" content="https://mimidonnelly.com" />
+  <meta property="og:url" content="https://yourdomain.com" />
   <meta name="twitter:card" content="summary_large_image" />
 </head>
 <body>
   <div class="container">
-    <img src="logo.png" alt="Logo" class="logo" />
+    <header class="header">
+      <img src="logo.png" alt="Logo" class="logo" />
+      <div class="header-links">
+        <a href="https://www.atorintel.com" target="_blank">CONSULTATION</a>
+        <a href="mailto:mimi@atorintel.com">CONTACT</a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank">
+          <img src="linkedin.png" alt="LinkedIn" class="linkedin-icon" />
+        </a>
+      </div>
+    </header>
 
     <div class="image-scroll" id="scroll">
       <img src="img1.jpg" alt="Image 1" />
@@ -27,18 +36,8 @@
     </div>
   </div>
 
-  <footer>
-    <div class="footer-links">
-      <a href="https://www.atorintel.com" target="_blank">CONSULTATION</a>
-      <a href="mailto:mimi@atorintel.com">CONTACT</a>
-      <a href="https://linkedin.com/in/dmimi" target="_blank">
-        <img src="linkedin.png" alt="LinkedIn" class="linkedin-icon" />
-      </a>
-    </div>
-  </footer>
-
   <script>
-    // Start at visually leftmost (Image 6) using row-reverse
+    // Start at image 6 (row-reverse = leftmost position)
     window.addEventListener("load", () => {
       const el = document.getElementById("scroll");
       el.scrollLeft = 0;
