@@ -45,6 +45,6 @@ export default function HomePage() {
       <footer className="text-center py-12">
         <h2 className="text-2xl font-semibold mb-2">Consultancy Contact</h2>
         <a
-          href="https://www.linkedin.com/in/YOURPROFILE"
+          href="https://www.linkedin.com/in/dmimi/"
           target="_blank_
 
