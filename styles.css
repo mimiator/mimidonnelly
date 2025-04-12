@@ -11,13 +11,14 @@ html, body {
   overflow-x: hidden;
 }
 
+/* Container that holds everything */
 .container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* ─── HEADER ───────────────────────── */
+/* ─── HEADER ─── */
 .header {
   display: flex;
   justify-content: space-between;
@@ -32,6 +33,7 @@ html, body {
   margin: 0;
 }
 
+/* This now becomes the "link group" */
 .header-links {
   display: flex;
   flex-direction: column;
@@ -53,7 +55,7 @@ html, body {
   width: 28px;
 }
 
-/* ─── SCROLL AREA ─────────────────── */
+/* ─── IMAGE SCROLL ─── */
 .image-scroll {
   display: flex;
   flex-direction: row-reverse;
@@ -62,23 +64,23 @@ html, body {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   flex-grow: 1;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 .image-scroll img {
-  max-width: 100%;
-  height: auto;
+  height: 100%;
   flex: 0 0 auto;
   scroll-snap-align: center;
   object-fit: contain;
   margin: 0;
   border: none;
+  max-width: unset;
 }
 
-/* ─── MOBILE RESPONSIVE ───────────── */
+/* ─── MOBILE FIXES ─── */
 @media (max-width: 768px) {
   .container {
-    height: auto; /* let it scroll */
+    height: auto;
   }
 
   .header {
@@ -93,28 +95,31 @@ html, body {
     max-width: 90%;
   }
 
-  .header-links {
-    order: 3; /* ⬇️ move below scroll */
-    margin-top: 20px;
-    align-items: center;
-  }
-
-  .header-links a {
-    font-size: 1.1rem;
-  }
-
-  .linkedin-icon {
-    height: 24px;
-    width: 24px;
-  }
-
   .image-scroll {
-    height: 65vh; /* ⬆️ give the scroll room */
-    padding-bottom: 10px;
+    height: 70vh; /* ⬆️ much larger image area */
+    margin-bottom: 20px;
   }
 
   .image-scroll img {
-    height: 100%;
+    width: auto;
+    height: 100%; /* ⬅️ fit by height */
     object-fit: contain;
+  }
+
+  /* Move links BELOW the scroll */
+  .header-links {
+    order: 2;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .header-links a {
+    font-size: 1.2rem;
+  }
+
+  .linkedin-icon {
+    height: 26px;
+    width: 26px;
   }
 }
