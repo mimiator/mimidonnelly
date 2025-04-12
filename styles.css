@@ -5,31 +5,35 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-color: #fff;
-  color: #000;
+  background: white;
   font-family: "Times New Roman", serif;
+  height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
-  height: 100%;
 }
 
+/* Prevent mobile top padding from address bar */
+body {
+  padding-top: env(safe-area-inset-top);
+}
+
+/* Flex container for everything */
 .container {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
+  min-height: 100vh;
+  width: 100%;
 }
 
-/* ─── HEADER ─── */
+/* ─── LOGO ─── */
 .header {
-  display: flex;
-  justify-content: flex-start;
-  padding: 8px 16px 0;
+  padding: 4px 16px 0;
 }
 
 .logo {
-  max-width: 500px;
-  width: 100%;
-  margin: 0;
+  max-width: 90%;
+  width: auto;
+  display: block;
 }
 
 /* ─── IMAGE SCROLL ─── */
@@ -37,12 +41,9 @@ html, body {
   display: flex;
   flex-direction: row-reverse;
   overflow-x: auto;
-  overflow-y: hidden;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  flex-shrink: 0;
-  height: 60vh;
+  height: 52vh;
   margin: 0;
   padding: 0;
 }
@@ -61,53 +62,20 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 8px;
-  padding: 10px 16px 20px;
-  flex-shrink: 0;
+  gap: 6px;
+  padding: 10px 16px 16px;
 }
 
 .header-links a {
-  font-size: 1.2rem;
-  text-decoration: none;
-  color: #000;
+  font-size: 1rem;
   font-weight: bold;
+  text-decoration: none;
+  color: black;
   text-transform: uppercase;
-  line-height: 1.2;
 }
 
 .linkedin-icon {
-  height: 26px;
-  width: 26px;
+  height: 22px;
+  width: 22px;
 }
 
-/* ─── MOBILE ONLY ─── */
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 6px 16px 0;
-  }
-
-  .logo {
-    max-width: 90%;
-  }
-
-  .image-scroll {
-    height: 50vh;
-    margin-bottom: 12px;
-  }
-
-  .header-links {
-    padding: 0 16px 24px;
-    align-items: flex-start;
-  }
-
-  .header-links a {
-    font-size: 1rem;
-  }
-
-  .linkedin-icon {
-    height: 22px;
-    width: 22px;
-  }
-}
