@@ -33,12 +33,12 @@
     </div>
   </div>
 
-  <!-- Scroll to last image on load -->
   <script>
-    window.addEventListener("load", () => {
-      const el = document.getElementById("scroll");
-      el.scrollLeft = el.scrollWidth;
-    });
-  </script>
+  // Scroll to the last image on page load
+  window.addEventListener("load", () => {
+    const scrollContainer = document.getElementById("scroll");
+    scrollContainer.scrollLeft = scrollContainer.scrollWidth;
+  });
+</script>
 </body>
 </html>
