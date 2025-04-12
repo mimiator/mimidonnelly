@@ -32,5 +32,14 @@
       </a>
     </div>
   </div>
+
+  <!-- Scroll to last image on load -->
+  <script>
+    window.addEventListener("load", () => {
+      const el = document.getElementById("scroll");
+      el.scrollLeft = el.scrollWidth;
+    });
+  </script>
 </body>
 </html>
+
