@@ -46,11 +46,11 @@ nav {
 /* CRM CARDS */
 .cards {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   overflow-x: auto;
   gap: 1.5rem;
   scroll-snap-type: x mandatory;
-  padding: 1rem 0 0.5rem 0; /* Reduced bottom padding */
+  padding: 1rem 0 0.5rem;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -59,15 +59,22 @@ nav {
   min-width: 200px;
   flex: 0 0 auto;
   scroll-snap-align: start;
-  text-align: left; /* Left-align text below images */
+  text-align: left;
 }
 
 .card img {
   width: 200px;
   height: auto;
   object-fit: contain;
-  border-radius: 8px;
-  margin: 0 auto 0.3rem auto;
+  margin: 0 auto 0.25rem 0;
+  border-radius: 0; /* Removed rounded corners */
+}
+
+.card p {
+  text-align: left; /* Align text with the image */
+  margin: 0;
+  padding-left: 0.25rem;
+  font-weight: normal;
 }
 
 /* ABOUT SECTION */
@@ -75,12 +82,11 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 1rem;
+  margin-top: 0.5rem; /* Reduced space between CRM and About */
 }
 
 .about img {
   max-width: 700px;
-  border-radius: 8px;
   margin-bottom: 0.5rem;
 }
 
@@ -95,7 +101,7 @@ nav {
 .about .text h2 {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  font-size: 2rem;
+  font-size: 2.5rem; /* Match size with Results heading */
   margin: 0;
 }
 
@@ -141,7 +147,6 @@ nav {
   max-width: 100%;
   height: auto;
   margin-top: 0.5rem;
-  border-radius: 8px;
 }
 
 /* CONTACT SECTION */
@@ -156,6 +161,7 @@ nav {
 
 .contact .info {
   max-width: 700px;
+  padding-left: 1rem;
 }
 
 .contact h2 {
@@ -172,15 +178,14 @@ nav {
 .contact img.linkedin {
   height: 30px;
   width: 30px;
-  margin: 1rem 0;
+  margin-top: 1rem;
 }
 
 .contact .contact-image {
   width: 100%;
   max-width: 700px;
-  margin-top: 1rem;
+  margin: 1.5rem auto 0 auto;
   display: block;
-  border-radius: 8px;
 }
 
 /* MEDIA QUERIES */
@@ -216,6 +221,10 @@ nav {
 
   .contact {
     align-items: flex-start;
+  }
+
+  .contact .info {
+    padding-left: 0;
     text-align: left;
   }
 
