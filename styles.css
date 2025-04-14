@@ -1,70 +1,51 @@
 body {
   font-family: 'Noto Serif', serif;
   margin: 0;
-  padding: 0;
-  background-color: #f9f8f3;
-  color: #000;
+  background-color: #faf9f3;
   overflow-x: hidden;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-section {
-  padding: 2rem 1rem;
-}
-
-/* NAVIGATION */
 nav {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 1rem 0;
-  font-weight: bold;
-  flex-wrap: wrap;
+  text-align: center;
+  padding: 1rem;
 }
 
-/* HERO */
-.header-image {
-  display: block;
-  max-width: 1100px;
-  margin: 0 auto;
+nav a {
+  margin: 0 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;
 }
 
 .hero {
-  display: none;
+  display: flex;
+  justify-content: center;
 }
 
-/* CRM CARDS */
+.hero-image {
+  max-width: 95%;
+  width: 100%;
+}
+
 .cards {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  margin-top: 1rem;
+  padding: 2rem 0;
+  flex-wrap: nowrap;
   overflow-x: auto;
-  padding: 1rem 0;
 }
 
 .card {
-  flex: 0 0 auto;
   text-align: left;
-  max-width: 220px;
+  min-width: 220px;
 }
 
-.card p {
-  margin-top: 0.5rem;
-  font-size: 1.1rem;
+.card img {
+  width: 100%;
+  height: auto;
 }
 
-/* ABOUT SECTION */
 .about {
   display: flex;
   flex-direction: column;
@@ -72,176 +53,142 @@ nav {
   margin-top: 2rem;
 }
 
-.about img {
-  max-width: 700px;
-  margin-bottom: 0.5rem;
+.about-image {
+  max-width: 90%;
 }
 
-.about .text {
+.about-content {
   display: flex;
-  gap: 1.5rem;
   align-items: flex-start;
-  max-width: 700px;
-  padding-left: 1rem;
+  max-width: 900px;
+  padding: 1rem;
 }
 
-.about .text h2 {
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
+.about-content .rotated {
+  transform: rotate(-90deg);
+  transform-origin: left bottom;
   font-size: 2rem;
-  margin: 0;
+  font-weight: bold;
+  padding-right: 2rem;
 }
 
-.about .text p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  max-width: 500px;
-  margin-top: -0.3rem;
+.about-content p {
+  margin-top: 0;
+  font-size: 1.2rem;
 }
 
-/* RESULTS */
 .results {
-  max-width: 1100px;
+  padding: 2rem;
+  max-width: 1200px;
   margin: auto;
 }
 
 .results h2 {
-  font-size: 2rem;
-  text-align: left;
+  font-size: 2.5rem;
   margin-bottom: 2rem;
-  padding-left: 1rem;
+  text-align: left;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem 2rem;
 }
 
 .result {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  align-items: center;
-  margin-bottom: 3rem;
-  gap: 1.5rem;
-}
-
-.result p {
-  font-size: 1.05rem;
-  line-height: 1.5;
-  text-align: left;
-  max-width: 90%;
-  margin: 0 auto;
-}
-
-.result img:first-child {
-  max-height: 50px;
-  width: auto;
-  grid-column: 2 / 3;
-  justify-self: start;
-}
-
-.result img:last-child {
-  max-width: 350px;
-  justify-self: center;
-  grid-column: 3 / 4;
-}
-
-.result img[alt*="Paula"] {
-  margin: 0.25rem 0;
-}
-
-/* CONTACT SECTION */
-.contact {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  max-width: 1000px;
-  margin: auto;
-  gap: 2rem;
 }
 
-.contact .info {
-  max-width: 400px;
+.result-logo {
+  max-width: 120px;
+  margin-bottom: 1rem;
+}
+
+.result p {
+  margin-bottom: 1rem;
+  max-width: 90%;
+  font-size: 1rem;
   text-align: left;
 }
 
+.result-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.result .paula {
+  padding: 0;
+  margin: 0;
+}
+
+.contact {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+.contact-info {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 1rem;
+}
+
 .contact h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
 }
 
-.contact a {
-  font-size: 1.2rem;
-  display: block;
-  margin: 0.5rem 0;
-}
-
-.contact img.linkedin {
-  height: 30px;
-  width: 30px;
+.contact-image {
+  max-width: 100%;
   margin-top: 1rem;
 }
 
-.contact .contact-image {
-  max-width: 500px;
-  width: 100%;
+.linkedin {
+  width: 40px;
+  margin-top: 0.5rem;
 }
 
-/* MEDIA QUERIES */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: row;
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  .header-image {
-    max-width: 100%;
-    width: 100%;
-  }
-
-  .cards {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    justify-content: flex-start;
-    padding: 1rem;
-  }
-
-  .about img {
-    width: 90%;
-  }
-
-  .about .text {
-    padding-left: 0;
-    gap: 1rem;
-  }
-
-  .results h2 {
-    text-align: left;
-    padding-left: 0;
-  }
-
-  .result {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    align-items: flex-start;
-  }
-
-  .result img:first-child {
-    order: 0;
-    margin-bottom: 1rem;
-  }
-
-  .result img:last-child {
+@media (min-width: 800px) {
+  .about {
     margin-top: 1rem;
+  }
+
+  .about-content {
+    flex-direction: row;
   }
 
   .contact {
+    flex-direction: row;
+    justify-content: space-between;
     align-items: flex-start;
   }
 
-  .contact .info {
-    text-align: left;
+  .contact-image {
+    width: 50%;
+    margin-top: 0;
   }
 
-  .contact .contact-image {
-    width: 100%;
-    margin-top: 1rem;
+  .cards {
+    overflow: visible;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+
+  .hero-image {
+    max-width: 1100px;
+  }
+
+  .results-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .result {
+    flex-direction: column;
+    justify-content: flex-start;
   }
 }
