@@ -3,46 +3,92 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mimi Donnelly</title>
-  <link rel="stylesheet" href="styles.css?v=2" />
+  <title>Mimi Donnelly Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    
-    <!-- LOGO -->
-    <header class="header">
-      <img src="logo.png" alt="Logo" class="logo" />
-    </header>
+  <nav class="nav">
+    <a href="#about">ABOUT</a>
+    <a href="#results">RESULTS</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
 
-    <!-- IMAGE SCROLL -->
-    <div class="image-scroll" id="scroll">
-      <img src="img1.jpg" alt="Image 1" />
-      <img src="img2.jpg" alt="Image 2" />
-      <img src="img3.jpg" alt="Image 3" />
-      <img src="img4.jpg" alt="Image 4" />
-      <img src="img5.jpg" alt="Image 5" />
-      <img src="img6.jpg" alt="Image 6" />
+  <header class="header">
+    <h1>MIMI DONNELLY</h1>
+    <h2>Creative Strategist. Message Architect. Movement-Maker.</h2>
+  </header>
+
+  <section class="gallery">
+    <div class="gallery-item">
+      <img src="Connection.jpg" alt="Connection" />
+      <p>Connection.</p>
     </div>
-
-    <!-- MENU LINKS -->
-    <div class="header-links">
-      <a href="https://www.atorintel.com" target="_blank">CONSULTATION</a>
-      <a href="mailto:mimi@atorintel.com">CONTACT</a>
-      <a href="https://linkedin.com/in/YOURUSERNAME" target="_blank">
-        <img src="linkedin.png" alt="LinkedIn" class="linkedin-icon" />
-      </a>
+    <div class="gallery-item">
+      <img src="Retention.jpg" alt="Retention" />
+      <p>Retention.</p>
     </div>
-    
-  </div>
+    <div class="gallery-item">
+      <img src="Momentum.jpg" alt="Momentum" />
+      <p>Momentum.</p>
+    </div>
+  </section>
 
-  <!-- Script to start scroll at image 6 -->
-  <script>
-    window.addEventListener("load", () => {
-      const scrollContainer = document.getElementById("scroll");
-      if (scrollContainer) {
-        scrollContainer.scrollLeft = scrollContainer.scrollWidth;
-      }
-    });
-  </script>
+  <section id="about" class="about-section">
+    <img src="About.jpg" alt="About Mimi" />
+    <div class="about-text">
+      <h3>About:</h3>
+      <p>
+        Everything I do starts with connection. My background is rooted in strategy, retention,
+        and messaging that earns trust and drives results. I’ve launched global products,
+        grown communities, and built systems that move people to act. Whether it’s marketing for
+        millions or a campaign built on purpose, I translate vision into structure—and ideas into lasting change.
+      </p>
+    </div>
+  </section>
+
+  <section id="results" class="results-section">
+    <h3>Results:</h3>
+    <div class="project">
+      <img src="SweetnrLogo.png" alt="Sweetnr Logo" class="logo" />
+      <img src="Sweetnr.png" alt="Sweetnr Project" />
+      <p>Built an AI powered app... focused platform to life.</p>
+    </div>
+    <div class="project">
+      <img src="Ringlogo.png" alt="Ring Logo" class="logo" />
+      <img src="Ring.png" alt="Ring Project" />
+      <p>Drove retention and product marketing... move faster with more clarity.</p>
+    </div>
+    <div class="project">
+      <img src="Fenderlogo.png" alt="Fender Logo" class="logo" />
+      <img src="Fender.png" alt="Fender Project" />
+      <p>Shaped engagement and retention strategy... users coming back to practice.</p>
+    </div>
+    <div class="project">
+      <img src="PaulasChoiceLogo.png" alt="Paula's Choice Logo" class="logo" />
+      <img src="Paulas Choice.png" alt="Paula's Choice Project" />
+      <p>Launched a loyalty program and full funnel... optimized backend systems.</p>
+    </div>
+    <div class="project">
+      <img src="BlueNileLogo.png" alt="Blue Nile Logo" class="logo" />
+      <img src="BlueNile.png" alt="Blue Nile Project" />
+      <p>Created and executed high performing email automations... full funnel retention strategy.</p>
+    </div>
+    <div class="project">
+      <img src="XboxLogo.png" alt="Xbox Logo" class="logo" />
+      <img src="Xbox.png" alt="Xbox Project" />
+      <p>Managed global campaigns and crisis comms... aligned across the organization.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <h3>Let’s Talk:</h3>
+    <p><a href="mailto:mimi@atorintel.com">mimi@atorintel.com</a></p>
+    <a href="https://www.linkedin.com/in/YOURPROFILE" target="_blank">
+      <img src="linkedin.png" alt="LinkedIn" class="linkedin-icon" />
+    </a>
+    <img src="Contact.jpg" alt="Mimi Donnelly in desert" class="contact-photo" />
+  </section>
 </body>
 </html>
