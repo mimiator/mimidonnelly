@@ -1,119 +1,158 @@
-* {
-  box-sizing: border-box;
-}
+/* Import Noto Serif from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
 
-html, body {
+body {
   margin: 0;
-  padding: 0;
-  background: white;
-  font-family: "Times New Roman", serif;
-  color: black;
-  overflow-x: hidden;
-  overflow-y: auto;
-  height: 100%;
+  font-family: 'Noto Serif', serif;
+  background-color: #f9f8f4;
+  color: #000000;
 }
 
-/* Layout container */
-.container {
+header {
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  min-height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #f9f8f4;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-/* ─── LOGO HEADER ─── */
-.header {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 0 16px; /* ✅ no top padding */
-  margin: 0;
-}
-
-.logo {
-  max-width: 90%;
-  width: auto;
-  display: block;
-}
-
-/* ─── IMAGE SCROLL SECTION ─── */
-.image-scroll {
-  display: flex;
-  flex-direction: row-reverse;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  height: 55vh; /* balanced height for mobile and desktop */
-  margin: 0;
-  padding: 0;
-  flex-shrink: 0;
-}
-
-.image-scroll img {
-  height: 100%;
-  flex: 0 0 auto;
-  scroll-snap-align: center;
-  object-fit: contain;
-  margin: 0;
-  border: none;
-  max-width: unset;
-}
-
-/* ─── MENU LINKS ─── */
-.header-links {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 6px;
-  padding: 10px 16px 20px;
-  flex-shrink: 0;
-}
-
-.header-links a {
-  font-size: 1.1rem;
-  font-weight: bold;
-  text-transform: uppercase;
+nav a {
   text-decoration: none;
-  color: black;
-  line-height: 1.2;
+  color: #000;
+  font-size: 18px;
+  margin: 0 20px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 64px;
+  margin: 40px 20px 0;
+  text-align: center;
+}
+
+h2 {
+  font-size: 24px;
+  text-align: center;
+  margin: 0 20px 40px;
+  font-weight: normal;
+  border-bottom: 3px solid black;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.section {
+  margin: 60px 20px;
+  text-align: center;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.card {
+  width: 300px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.card p {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.logo-text {
+  font-size: 28px;
+  text-align: center;
+  margin: 0 auto 60px;
+  max-width: 900px;
+}
+
+#about, #results, #contact {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+#about img, #contact img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.about-content, .contact-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-content p, .contact-content p {
+  max-width: 800px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.logo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.result-logo {
+  width: 100px;
+  height: auto;
 }
 
 .linkedin-icon {
-  height: 22px;
-  width: 22px;
+  width: 40px;
+  height: auto;
+  margin-top: 10px;
 }
 
-/* ─── MOBILE OPTIMIZATION ─── */
 @media (max-width: 768px) {
-  .header {
+  header {
     flex-direction: column;
     align-items: flex-start;
-    padding: 0 16px;
   }
 
-  .logo {
-    max-width: 90%;
-  }
-
-  .image-scroll {
-    height: 50vh; /* slightly tighter for small screens */
-    margin-bottom: 12px;
-  }
-
-  .header-links {
+  nav {
+    display: flex;
+    flex-direction: column;
     align-items: flex-start;
-    text-align: left;
-    padding: 0 16px 24px;
+    margin-top: 10px;
   }
 
-  .header-links a {
-    font-size: 1rem;
+  nav a {
+    margin: 5px 0;
   }
 
-  .linkedin-icon {
-    height: 20px;
-    width: 20px;
+  h1 {
+    font-size: 40px;
+  }
+
+  .logo-text {
+    font-size: 20px;
+  }
+
+  .card {
+    width: 90%;
   }
 }
