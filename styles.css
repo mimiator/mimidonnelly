@@ -38,10 +38,11 @@ nav {
 /* HERO */
 .header-image {
   display: block;
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
+  width: 95%; /* Nice and wide */
+  max-width: 1200px;
+  margin: 0 auto; /* Center it */
 }
+
 
 /* CRM CARDS */
 .cards {
@@ -53,6 +54,8 @@ nav {
   padding: 1rem 0 0.5rem;
   max-width: 800px;
   margin: 0 auto;
+  padding: 2rem 1rem;
+  overflow-x: hidden;
 }
 
 .card {
@@ -161,7 +164,9 @@ nav {
 
 .contact .info {
   max-width: 700px;
-  padding-left: 1rem;
+padding-left: 0; /* Align text with image */
+  text-align: left;
+  margin: 0 auto;
 }
 
 .contact h2 {
