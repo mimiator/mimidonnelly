@@ -1,113 +1,120 @@
+/* GLOBAL STYLES */
 body {
   font-family: 'Noto Serif', serif;
   margin: 0;
   padding: 0;
-  background: #faf9f3;
-  color: #111;
+  background-color: #f9f8f3;
+  color: #000;
 }
 
-header {
-  text-align: center;
-  padding: 2rem 1rem 0.5rem;
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
+h1, h2, p, a {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit; /* Keeps nav links black */
+}
+
+/* NAVIGATION */
 nav {
   display: flex;
   justify-content: center;
-  gap: 3rem;
+  gap: 2rem;
+  padding: 1rem 0;
   font-weight: bold;
+}
+
+nav a {
   font-size: 1rem;
+}
+
+/* HERO HEADER */
+.hero {
+  text-align: center;
   padding-bottom: 1rem;
+  border-bottom: 2px solid black;
+  margin: 0 1rem;
 }
 
 .hero h1 {
   font-size: 4rem;
-  margin: 0;
-  line-height: 1;
+  margin-bottom: 0.5rem;
 }
 
-.tagline {
-  font-size: 1.3rem;
-  margin-top: 0.5rem;
-  font-weight: 600;
-  border-bottom: 3px solid #111;
-  display: inline-block;
+.hero .tagline {
+  font-size: 1.25rem;
+  white-space: nowrap;
 }
 
+/* CARDS SECTION */
 .cards {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  margin: 3rem auto 1rem;
-  max-width: 1000px;
+  margin: 2rem 1rem;
   flex-wrap: wrap;
-  text-align: left;
 }
 
 .card {
-  width: 250px;
-}
-
-.card img {
-  width: 100%;
-  display: block;
+  text-align: left;
+  max-width: 250px;
 }
 
 .card p {
-  font-size: 1.1rem;
   margin-top: 0.5rem;
-  text-align: left;
+  font-size: 1.1rem;
 }
 
-/* ABOUT */
+/* ABOUT SECTION */
 .about {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 900px;
-  margin: 4rem auto 2rem;
-  padding: 0 1rem;
+  margin: 3rem 1rem;
+}
+
+.about img {
+  max-width: 700px;
 }
 
 .about .text {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 1rem;
-  margin-top: 2rem;
+  max-width: 700px;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
 }
 
-.about h2 {
-  font-size: 3rem;
+.about .text h2 {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  margin: 0;
-  line-height: 1;
+  font-size: 2.25rem;
 }
 
-.about p {
-  max-width: 600px;
-  font-size: 1.1rem;
+.about .text p {
+  font-size: 1.2rem;
   line-height: 1.6;
 }
 
-.about img {
-  margin-top: 2rem;
-  max-width: 600px;
-  width: 100%;
-  height: auto;
-}
-
-/* RESULTS */
+/* RESULTS SECTION */
 .results {
+  padding: 2rem 1rem;
   max-width: 1000px;
-  margin: 3rem auto;
-  padding: 0 1rem;
-  text-align: center;
+  margin: auto;
 }
 
 .results h2 {
-  font-size: 3rem;
+  font-size: 2.25rem;
+  text-align: center;
   margin-bottom: 2rem;
 }
 
@@ -116,114 +123,105 @@ nav {
   flex-direction: column;
   align-items: center;
   margin-bottom: 3rem;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: center;
+  gap: 1rem;
 }
 
-.result img {
-  max-width: 300px;
-  height: auto;
-  margin-bottom: 1rem;
+.result img:first-child {
+  max-height: 50px;
+  width: auto;
+}
+
+.result img:last-child {
+  max-width: 600px;
 }
 
 .result p {
   max-width: 600px;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  text-align: center;
-  margin: 1rem auto 0;
+  font-size: 1.05rem;
+  line-height: 1.5;
 }
 
-.result img:first-child {
-  max-height: 60px;
-  object-fit: contain;
-  margin-bottom: 1rem;
-}
-
-/* Special case: Paula’s Choice image with tighter spacing */
-.result img[src*="pclogo"], .result img[src*="PaulasChoice"] {
-  margin-bottom: 0.5rem;
-  padding: 0;
-}
-
-/* CONTACT */
+/* CONTACT SECTION */
 .contact {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1rem;
+  text-align: center;
   max-width: 1000px;
-  margin: 4rem auto;
-  padding: 0 1rem;
-  gap: 2rem;
-  flex-wrap: wrap;
+  margin: auto;
 }
 
 .contact h2 {
-  font-size: 3rem;
-  margin: 0 0 1rem 0;
-}
-
-.contact p, .contact a {
-  font-size: 1.2rem;
+  font-size: 2.25rem;
   margin-bottom: 1rem;
 }
 
-.contact .linkedin {
-  width: 36px;
-  height: auto;
+.contact a {
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 1rem;
 }
 
-.contact-image {
-  max-width: 500px;
-  width: 100%;
-  height: auto;
+.contact img.linkedin {
+  height: 30px;
+  width: 30px;
+  margin-bottom: 2rem;
 }
 
-/* HEADINGS */
-.about h2, .results h2, .contact h2 {
-  font-size: 3rem;
+/* Reduce Paula's Choice padding specifically */
+.result img[alt*="Paula"] {
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
 }
 
-/* Responsive */
+/* MEDIA QUERIES */
 @media (max-width: 768px) {
   nav {
-    flex-direction: column;
-    gap: 0.5rem;
+    flex-direction: row;
+    gap: 1.25rem;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+    text-align: left;
+  }
+
+  .hero .tagline {
+    font-size: 1rem;
+    text-align: left;
+    white-space: nowrap;
   }
 
   .cards {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
   }
 
   .card {
-    width: 80%;
+    min-width: 200px;
   }
 
   .about .text {
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
   }
 
-  .about h2 {
-    writing-mode: horizontal-tb;
-    transform: none;
-  }
-
-  .result p {
+  .results .result p {
     text-align: center;
-    padding: 0 1rem;
   }
 
   .contact {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+    text-align: center;
   }
 
   .contact-image {
-    max-width: 100%;
+    margin-top: 2rem;
   }
 }
