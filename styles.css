@@ -1,185 +1,178 @@
 body {
-  font-family: 'Noto Serif', serif;
+  font-family: 'Georgia', serif;
   margin: 0;
-  background-color: #faf9f3;
+  background-color: #fefdf7;
+  color: #000;
   overflow-x: hidden;
 }
 
+/* NAVIGATION */
 nav {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 2rem;
   padding: 1rem;
-  flex-wrap: wrap;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 nav a {
   text-decoration: none;
-  font-weight: bold;
-  color: #000;
+  color: black;
 }
 
-.hero {
-  display: flex;
-  justify-content: center;
-  padding: 0 1rem;
+header img {
+  max-width: 100%;
+  width: 90vw;
+  display: block;
+  margin: 0 auto 1rem;
 }
 
-.hero-image {
-  max-width: 95%;
-}
-
-.cards {
+/* CRM SECTION */
+.crm-scroll {
   display: flex;
   overflow-x: auto;
-  padding: 2rem 1rem 0 1rem;
-  gap: 1.5rem;
-  scroll-snap-type: x mandatory;
-}
-
-.card {
-  min-width: 200px;
-  scroll-snap-align: start;
-  flex: 0 0 auto;
-  text-align: left;
-}
-
-.card img {
-  width: 100%;
-  height: auto;
-}
-
-.about {
-  margin-top: 1rem;
   padding: 0 1rem;
+  scroll-snap-type: x mandatory;
+  gap: 1.5rem;
+  justify-content: center;
 }
 
-.about-image {
-  width: 100%;
-  max-width: 800px;
-  display: block;
-  margin: 0 auto;
+.crm-scroll img {
+  height: 400px;
+  scroll-snap-align: start;
 }
 
-.about-content {
+/* ABOUT SECTION */
+.about {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 1rem;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+}
+
+.about img {
+  max-width: 700px;
+  margin-bottom: 0.5rem;
+}
+
+.about .text {
+  display: flex;
+  gap: 1.5rem;
   align-items: flex-start;
+  max-width: 700px;
+  padding-left: 1rem;
 }
 
-.rotated {
-  transform: rotate(-90deg);
-  transform-origin: left bottom;
-  font-weight: bold;
+.about .text h2 {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
   font-size: 2rem;
-  padding-right: 1rem;
-  white-space: nowrap;
+  margin: 0;
 }
 
-.about-content p {
+.about .text p {
   font-size: 1.1rem;
-  margin-top: 0;
+  line-height: 1.6;
+  max-width: 500px;
+  margin-top: -0.3rem;
 }
 
+/* RESULTS SECTION */
 .results {
-  padding: 2rem 1rem;
+  padding: 2rem;
 }
 
 .results h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
   text-align: left;
+  font-size: 2.5rem;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 .result {
-  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
 .result-logo {
-  max-width: 120px;
-  margin-bottom: 1rem;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 150px;
+  margin-bottom: 0.75rem;
 }
 
 .result p {
-  max-width: 600px;
-  margin: 0.5rem auto 1rem auto;
-  font-size: 1rem;
-  text-align: left;
+  max-width: 400px;
 }
 
 .result-image {
   max-width: 100%;
-  height: auto;
+  margin-top: 1rem;
 }
 
+/* LET'S TALK */
 .contact {
-  padding: 2rem 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-}
-
-.contact-info {
-  margin-bottom: 1rem;
+  align-items: center;
+  margin: 2rem;
 }
 
 .contact h2 {
   font-size: 2.5rem;
-  margin-bottom: 0.5rem;
 }
 
 .contact a {
-  color: inherit;
   text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
 }
 
-.linkedin {
-  width: 40px;
-  margin-top: 0.5rem;
+.contact img {
+  max-width: 700px;
+  margin-top: 1.5rem;
+  align-self: flex-end;
 }
 
-.contact-image {
-  width: 100%;
-  margin-top: 1rem;
-}
-
-@media (min-width: 768px) {
-  .results {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem 2rem;
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  .result {
-    text-align: left;
+  header img {
+    width: 95vw;
   }
 
-  .result-logo {
-    margin: 0 auto 1rem auto;
-    display: block;
-  }
-
-  .contact {
-    flex-direction: column;
+  .about .text {
+    flex-direction: row;
     align-items: flex-start;
   }
 
-  .contact-info {
-    max-width: 600px;
+  .result-grid {
+    display: block;
   }
 
-  .contact-image {
-    align-self: flex-end;
-    width: 60%;
-    margin-top: 2rem;
+  .result {
+    margin-bottom: 2rem;
+  }
+
+  .contact {
+    align-items: flex-start;
+  }
+
+  .contact img {
+    align-self: center;
+  }
+
+  .result-logo {
+    margin: 0 auto 0.75rem;
   }
 }
