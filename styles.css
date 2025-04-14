@@ -46,17 +46,8 @@ nav {
 /* CRM CARDS */
 .cards {
   display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 1rem;
   overflow-x: auto;
-  padding: 1rem 0;
-}
-
-.cards {
-  display: flex;
-  overflow-x: auto;
-  padding: 2rem 1rem 0 1rem;
+  padding: 1rem;
   gap: 1.5rem;
   scroll-snap-type: x mandatory;
 }
@@ -70,16 +61,16 @@ nav {
 
 .card img {
   width: 100%;
-  height: auto;
+  height: 140px; /* Adjusted height to show it's a scrollable section */
+  object-fit: cover;
 }
-
 
 /* ABOUT SECTION */
 .about {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 1rem; /* Reduced space below scroll cards */
 }
 
 .about img {
@@ -122,19 +113,15 @@ nav {
   text-align: left;
 }
 
-.results-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem 2rem;
-}
-
+/* Default result style */
 .result {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin-bottom: 3rem;
 }
 
-.result-logo {
+.result img:first-child {
   max-width: 120px;
   margin-bottom: 1rem;
 }
@@ -146,14 +133,9 @@ nav {
   text-align: left;
 }
 
-.result-image {
+.result img:last-child {
   max-width: 100%;
   height: auto;
-}
-
-.result .paula {
-  padding: 0;
-  margin: 0;
 }
 
 /* CONTACT SECTION */
@@ -235,11 +217,18 @@ nav {
   }
 
   .result img:first-child {
-    order: 0;
+    align-self: center;
+    margin-bottom: 1rem;
+    max-width: 100px;
+  }
+
+  .result p {
+    text-align: left;
     margin-bottom: 1rem;
   }
 
   .result img:last-child {
+    align-self: center;
     margin-top: 1rem;
   }
 
@@ -254,5 +243,29 @@ nav {
   .contact .contact-image {
     width: 100%;
     margin-top: 1rem;
+  }
+}
+
+/* DESKTOP: Column style results layout */
+@media (min-width: 769px) {
+  .result {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .result img:first-child {
+    grid-column: 1 / 2;
+  }
+
+  .result p {
+    grid-column: 1 / 2;
+  }
+
+  .result img:last-child {
+    grid-column: 2 / 3;
+    align-self: center;
+    justify-self: center;
   }
 }
