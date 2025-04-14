@@ -1,178 +1,156 @@
-/* Global Styles */
+/* Base styles */
 body {
   font-family: 'Noto Serif', serif;
+  background-color: #f9f8f3;
+  color: #000;
   margin: 0;
-  background-color: #f9f7f1;
-  color: #111;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 nav {
-  text-align: center;
-  padding: 20px 0;
-  background-color: #f9f7f1;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
   font-weight: bold;
-  font-size: 1.2rem;
+  padding-top: 1rem;
 }
 
 nav a {
-  margin: 0 30px;
   text-decoration: none;
   color: black;
+  font-size: 1rem;
 }
 
-.header-image {
+.hero img {
   width: 100%;
+  max-width: 1100px;
+  height: auto;
   display: block;
-  margin-bottom: 20px;
+  margin: 0 auto;
 }
 
-/* Card Section */
 .cards {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  padding: 20px;
   flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2rem auto;
+  max-width: 1100px;
 }
 
 .card {
+  max-width: 300px;
   text-align: left;
-  width: 300px;
 }
 
 .card img {
   width: 100%;
   height: auto;
+  display: block;
 }
 
-/* About Section */
+.card p {
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+}
+
 .about {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  padding: 40px 20px;
-  flex-wrap: wrap;
-}
-
-.about-img {
-  width: 600px;
-  max-width: 100%;
-  height: auto;
-}
-
-.about-text {
-  max-width: 500px;
-  position: relative;
-}
-
-.about-text h2 {
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  transform: rotate(180deg);
-  font-size: 2.5rem;
-  margin: 0;
-  font-weight: 700;
-  position: absolute;
-  left: -60px;
-  top: 0;
-}
-
-.about-text p {
-  margin-left: 60px;
-  font-size: 1.1rem;
-}
-
-/* Results Section */
-.results {
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.results h2 {
-  font-size: 3rem;
-  margin-bottom: 40px;
-}
-
-.result {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 900px;
-  margin: 0 auto 60px;
-  padding: 0 20px;
+  max-width: 1100px;
+  margin: 2rem auto;
+  text-align: left;
+  padding: 1rem;
 }
 
-.result .logo {
-  width: 200px;
-  max-width: 100%;
+.about img {
+  width: 100%;
   height: auto;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
+}
+
+.about h2 {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  margin: 0 1rem 0 0;
+  font-size: 2rem;
+}
+
+.about .text {
+  max-width: 700px;
+}
+
+.results {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.results h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.result {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.result img:first-child {
+  max-width: 150px;
+  height: auto;
 }
 
 .result p {
   max-width: 700px;
+  margin: 1rem auto;
   text-align: left;
-  font-size: 1rem;
-  margin: 20px 0;
 }
 
-.result img:not(.logo) {
+.result img:last-child {
   width: 100%;
+  max-width: 700px;
   height: auto;
 }
 
-.tight-padding {
-  padding: 0;
-  margin: 0 auto;
-  display: block;
-}
-
-/* Contact Section */
 .contact {
-  padding: 60px 20px;
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .contact h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  text-align: left;
+  font-size: 2rem;
 }
 
-.contact-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-}
-
-.contact-info {
-  flex: 1 1 300px;
-}
-
-.contact-info a {
-  font-size: 1.3rem;
-  display: block;
-  margin-bottom: 10px;
-  text-decoration: none;
-  color: black;
-}
-
-.linkedin {
-  width: 36px;
+.contact img.linkedin {
+  width: 40px;
   height: auto;
+  margin: 1rem 0;
 }
 
 .contact-image {
-  flex: 1 1 500px;
-  max-width: 600px;
   width: 100%;
+  max-width: 700px;
   height: auto;
+  margin-top: 1rem;
+  align-self: center;
 }
 
-/* Responsive */
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .cards {
     flex-direction: column;
@@ -180,39 +158,25 @@ nav a {
   }
 
   .about {
-    flex-direction: column;
-    align-items: flex-start;
+    text-align: center;
   }
 
-  .about-text h2 {
-    position: static;
+  .about h2 {
     writing-mode: horizontal-tb;
-    transform: none;
-    margin-bottom: 10px;
+    transform: rotate(0);
+    margin: 1rem 0;
   }
 
-  .about-text p {
-    margin-left: 0;
-  }
-
-  .results h2 {
+  .results .result p {
     text-align: center;
   }
 
-  .result {
+  .contact {
+    text-align: center;
     align-items: center;
   }
 
-  .result p {
-    text-align: center;
-  }
-
-  .contact-wrapper {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contact-info {
-    text-align: center;
+  .contact h2, .results h2, .about h2 {
+    font-size: 2rem;
   }
 }
