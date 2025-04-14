@@ -35,14 +35,13 @@ nav {
   flex-wrap: wrap;
 }
 
-/* HERO */
+/* HEADER IMAGE */
 .header-image {
   display: block;
-  width: 95%; /* Nice and wide */
+  width: 95%;
   max-width: 1200px;
-  margin: 0 auto; /* Center it */
+  margin: 0 auto;
 }
-
 
 /* CRM CARDS */
 .cards {
@@ -54,8 +53,6 @@ nav {
   padding: 1rem 0 0.5rem;
   max-width: 800px;
   margin: 0 auto;
-  padding: 2rem 1rem;
-  overflow-x: hidden;
 }
 
 .card {
@@ -70,11 +67,11 @@ nav {
   height: auto;
   object-fit: contain;
   margin: 0 auto 0.25rem 0;
-  border-radius: 0; /* Removed rounded corners */
+  border-radius: 0; /* No rounded corners */
 }
 
 .card p {
-  text-align: left; /* Align text with the image */
+  text-align: left;
   margin: 0;
   padding-left: 0.25rem;
   font-weight: normal;
@@ -85,7 +82,7 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 0.5rem; /* Reduced space between CRM and About */
+  margin-top: 0.5rem; /* Tighter spacing to CRM */
 }
 
 .about img {
@@ -104,7 +101,7 @@ nav {
 .about .text h2 {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  font-size: 2.5rem; /* Match size with Results heading */
+  font-size: 2.5rem; /* Match "Results:" */
   margin: 0;
 }
 
@@ -164,7 +161,7 @@ nav {
 
 .contact .info {
   max-width: 700px;
-padding-left: 0; /* Align text with image */
+  padding-left: 0; /* Align to image */
   text-align: left;
   margin: 0 auto;
 }
@@ -194,46 +191,4 @@ padding-left: 0; /* Align text with image */
 }
 
 /* MEDIA QUERIES */
-@media (max-width: 768px) {
-  .cards {
-    justify-content: flex-start;
-  }
-
-  .card img {
-    width: 180px;
-  }
-
-  .about .text {
-    padding-left: 0;
-    gap: 1rem;
-  }
-
-  .result {
-    flex-direction: column;
-  }
-
-  .result img:first-child {
-    align-self: center;
-  }
-
-  .result p {
-    text-align: left;
-  }
-
-  .result img:last-child {
-    align-self: center;
-  }
-
-  .contact {
-    align-items: flex-start;
-  }
-
-  .contact .info {
-    padding-left: 0;
-    text-align: left;
-  }
-
-  .contact .contact-image {
-    margin-top: 1rem;
-  }
-}
+@media (max-width:
