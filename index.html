@@ -6,6 +6,114 @@
   <title>Mimi Donnelly</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Serif', serif;
+      background-color: #f9f8f3;
+      color: #000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      font-weight: bold;
+    }
+
+    .hero {
+      text-align: center;
+      margin-top: 0;
+    }
+
+    .hero img {
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem 1rem;
+      flex-wrap: wrap;
+    }
+
+    .card img {
+      max-height: 400px;
+      width: auto;
+    }
+
+    .card p {
+      text-align: center;
+      font-size: 1.25rem;
+    }
+
+    .about {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .about img {
+      max-width: 50%;
+      height: auto;
+    }
+
+    .about .text {
+      max-width: 500px;
+      padding-left: 2rem;
+    }
+
+    .about h2 {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    .results {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .results h2 {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .result {
+      margin-bottom: 3rem;
+    }
+
+    .result img {
+      max-width: 300px;
+      height: auto;
+      margin: 0.5rem;
+    }
+
+    .contact {
+      padding: 2rem;
+      text-align: left;
+    }
+
+    .contact h2 {
+      font-size: 2rem;
+    }
+
+    .contact img.linkedin {
+      width: 30px;
+      vertical-align: middle;
+    }
+
+    .contact-image {
+      width: 100%;
+      max-width: 800px;
+      margin-top: 2rem;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -14,28 +122,30 @@
       <a href="#results">RESULTS</a>
       <a href="#contact">CONTACT</a>
     </nav>
-    <img src="header.png" alt="Mimi Donnelly Header" class="header-image">
+    <div class="hero">
+      <img src="header.png" alt="Mimi Donnelly Header">
+    </div>
   </header>
 
   <section class="cards">
-    <div class="card small">
+    <div class="card">
       <img src="Connection.jpg" alt="Connection">
       <p>Connection.</p>
     </div>
-    <div class="card small">
+    <div class="card">
       <img src="Retention.jpg" alt="Retention">
       <p>Retention.</p>
     </div>
-    <div class="card small">
+    <div class="card">
       <img src="Momentum.jpg" alt="Momentum">
       <p>Momentum.</p>
     </div>
   </section>
 
   <section id="about" class="about">
-    <img src="about.jpg" alt="About Mimi" class="about-img">
+    <img src="about.jpg" alt="About Mimi">
     <div class="text">
-      <h2 class="vertical">About:</h2>
+      <h2>About:</h2>
       <p>Everything I do starts with connection. My background is rooted in strategy, retention, and messaging that earns trust and drives results. I’ve launched global products, grown communities, and built systems that move people to act. Whether it’s marketing for millions or a campaign built on purpose, I translate vision into structure—and ideas into lasting change.</p>
     </div>
   </section>
@@ -78,7 +188,7 @@
     <h2>Let’s Talk:</h2>
     <p><a href="mailto:mimi@atorintel.com">mimi@atorintel.com</a></p>
     <a href="https://www.linkedin.com/in/mimidonnelly" target="_blank">
-      <img src="linkedin.png" alt="LinkedIn" class="linkedin resized">
+      <img src="linkedin.png" alt="LinkedIn" class="linkedin">
     </a>
     <img src="contact.jpg" alt="Contact Photo" class="contact-image">
   </section>
