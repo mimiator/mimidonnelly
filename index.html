@@ -1,58 +1,96 @@
-<nav>
-  <a href="#about">About</a>
-  <a href="#results">Results</a>
-  <a href="#contact">Contact</a>
-</nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mimi Donnelly</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
 
-<header>
-  <img src="header.png" alt="Mimi Donnelly Header">
-</header>
+  <header>
+    <nav>
+      <a href="#about">ABOUT</a>
+      <a href="#results">RESULTS</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+    <img src="header.png" alt="Header Image" class="header-image"/>
+  </header>
 
-<div class="crm-scroll">
-  <div>
-    <img src="connection.jpg" alt="Connection">
-    <p>Connection.</p>
-  </div>
-  <div>
-    <img src="retention.jpg" alt="Retention">
-    <p>Retention.</p>
-  </div>
-  <div>
-    <img src="momentum.jpg" alt="Momentum">
-    <p>Momentum.</p>
-  </div>
-</div>
-
-<section class="about" id="about">
-  <img src="about.png" alt="About image">
-  <div class="text">
-    <h2>About:</h2>
-    <p>Everything I do starts with connection. My background is rooted in strategy, retention, and messaging that earns trust and drives results. I’ve launched global products, grown communities, and built systems that move people to act. Whether it’s marketing for millions or a campaign built on purpose, I translate vision into structure—and ideas into lasting change.</p>
-  </div>
-</section>
-
-<section class="results" id="results">
-  <h2>Results:</h2>
-  <div class="result-grid">
-    <div class="result">
-      <img src="sweetnrlogo.png" alt="Sweetnr Logo" class="result-logo">
-      <p>Built an AI powered app... </p>
-      <img src="sweetnr.jpg" class="result-image" alt="Sweetnr Project">
+  <section class="cards">
+    <div class="card">
+      <img src="Connection.jpg" alt="Connection">
+      <p>Connection.</p>
     </div>
-    <div class="result">
-      <img src="ringlogo.png" alt="Ring Logo" class="result-logo">
-      <p>Drove retention and product marketing at Ring...</p>
-      <img src="ring.jpg" class="result-image" alt="Ring Project">
+    <div class="card">
+      <img src="Retention.jpg" alt="Retention">
+      <p>Retention.</p>
     </div>
-    <!-- Continue for other case studies -->
-  </div>
-</section>
+    <div class="card">
+      <img src="Momentum.jpg" alt="Momentum">
+      <p>Momentum.</p>
+    </div>
+  </section>
 
-<section class="contact" id="contact">
-  <h2>Let’s Talk:</h2>
-  <a href="mailto:mimi@atorintel.com">mimi@atorintel.com</a><br>
-  <a href="https://www.linkedin.com/in/mimi-donnelly" target="_blank">
-    <img src="linkedin-icon.png" alt="LinkedIn Icon" width="32">
-  </a>
-  <img src="contact.png" alt="Contact image">
-</section>
+  <section id="about" class="about">
+    <img src="about.png" alt="About Photo">
+    <div class="text">
+      <h2>About:</h2>
+      <p>Everything I do starts with connection. My background is rooted in strategy, retention, and messaging that earns trust and drives results. I’ve launched global products, grown communities, and built systems that move people to act. Whether it’s marketing for millions or a campaign built on purpose, I translate vision into structure—and ideas into lasting change.</p>
+    </div>
+  </section>
+
+  <section id="results" class="results">
+    <h2>Results:</h2>
+
+    <div class="result">
+      <img src="SweetnrLogo.png" alt="Sweetnr Logo">
+      <p>Built an AI powered app from the ground up, owning product, brand, and operations from concept through prelaunch. Led a cross functional global team to bring a clear, creator focused platform to life.</p>
+      <img src="Sweetnr.png" alt="Sweetnr">
+    </div>
+
+    <div class="result">
+      <img src="ringlogo.png" alt="Ring Logo">
+      <p>Drove retention and product marketing at Ring, launching high impact campaigns and scaling lifecycle communications for tens of millions subscribers. Delivered over $10.4M in YOY growth through data-driven strategy.</p>
+      <img src="Ring.png" alt="Ring Campaign">
+    </div>
+
+    <div class="result">
+      <img src="fenderlogo.png" alt="Fender Logo">
+      <p>Shaped engagement and retention strategy for Fender Play, expanding the platform and driving subscription growth. Built targeted lifecycle communications, personalized product experiences, and educational content that kept users coming back to practice.</p>
+      <img src="Fender.png" alt="Fender Campaign">
+    </div>
+
+    <div class="result">
+      <img src="pclogo.png" alt="Paula’s Choice Logo">
+      <p>Launched a loyalty program and full funnel automations for Paula’s Choice to drive replenishment and reduce support tickets. Created lifecycle campaigns that boosted engagement and optimized backend systems.</p>
+      <img src="Paulas Choice.png" alt="Paula's Choice">
+    </div>
+
+    <div class="result">
+      <img src="BlueNileLogo.png" alt="Blue Nile Logo">
+      <p>Created and executed high performing email automations for Blue Nile, generating over $400K in weekly revenue. Developed personalized lifecycle campaigns that boosted engagement and supported full funnel retention strategy.</p>
+      <img src="BlueNile.png" alt="Blue Nile">
+    </div>
+
+    <div class="result">
+      <img src="XboxLogo.png" alt="Xbox Logo">
+      <p>Managed global campaigns and crisis comms for Xbox, owning media strategy, launch calendars, and cross team coordination across Microsoft. Planned and executed press tours, supported E3 and Gamescom, and helped secure top tier coverage.</p>
+      <img src="Xbox.png" alt="Xbox">
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="info">
+      <h2>Let’s Talk:</h2>
+      <p><a href="mailto:mimi@atorintel.com">mimi@atorintel.com</a></p>
+      <a href="https://www.linkedin.com/in/mimidonnelly" target="_blank">
+        <img src="linkedin.png" alt="LinkedIn" class="linkedin">
+      </a>
+    </div>
+    <img src="contact.png" alt="Contact Photo" class="contact-image">
+  </section>
+
+</body>
+</html>
