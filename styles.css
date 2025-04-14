@@ -5,10 +5,11 @@ body {
   background-color: #f9f8f3;
   color: #000;
   overflow-x: hidden;
+  max-width: 100vw;
 }
 
 img {
-  max-width: 95%;
+  max-width: 100%;
   height: auto;
   display: block;
 }
@@ -20,6 +21,8 @@ a {
 
 section {
   padding: 2rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 /* NAVIGATION */
@@ -35,34 +38,34 @@ nav {
 /* HERO */
 .header-image {
   display: block;
-  max-width: 95%;
+  width: 100%;
+  max-width: 800px;
   margin: 0 auto;
-}
-
-.hero {
-  display: none;
 }
 
 /* CRM CARDS */
 .cards {
   display: flex;
   overflow-x: auto;
-  padding: 1rem;
   gap: 1.5rem;
   scroll-snap-type: x mandatory;
+  padding: 1rem 0;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .card {
   min-width: 200px;
-  scroll-snap-align: start;
   flex: 0 0 auto;
+  scroll-snap-align: start;
   text-align: left;
 }
 
 .card img {
-  width: 100%;
-  height: 140px; /* Adjusted height to show it's a scrollable section */
-  object-fit: cover;
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
 /* ABOUT SECTION */
@@ -70,7 +73,7 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 1rem; /* Reduced space below scroll cards */
+  margin-top: 1rem;
 }
 
 .about img {
@@ -100,11 +103,11 @@ nav {
   margin-top: -0.3rem;
 }
 
-/* RESULTS */
+/* RESULTS SECTION */
 .results {
-  padding: 2rem;
-  max-width: 1200px;
-  margin: auto;
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .results h2 {
@@ -113,29 +116,28 @@ nav {
   text-align: left;
 }
 
-/* Default result style */
 .result {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
+  gap: 1rem;
 }
 
 .result img:first-child {
   max-width: 120px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .result p {
-  margin-bottom: 1rem;
-  max-width: 90%;
   font-size: 1rem;
   text-align: left;
+  margin-bottom: 1rem;
 }
 
 .result img:last-child {
   max-width: 100%;
   height: auto;
+  margin-top: 0.5rem;
 }
 
 /* CONTACT SECTION */
@@ -143,129 +145,6 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  max-width: 1000px;
-  margin: auto;
-  gap: 2rem;
-}
-
-.contact .info {
-  max-width: 400px;
-  text-align: left;
-}
-
-.contact h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.contact a {
-  font-size: 1.2rem;
-  display: block;
-  margin: 0.5rem 0;
-}
-
-.contact img.linkedin {
-  height: 30px;
-  width: 30px;
-  margin-top: 1rem;
-}
-
-.contact .contact-image {
-  max-width: 500px;
-  width: 100%;
-}
-
-/* MEDIA QUERIES */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: row;
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  .header-image {
-    max-width: 100%;
-    width: 100%;
-  }
-
-  .cards {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    justify-content: flex-start;
-    padding: 1rem;
-  }
-
-  .about img {
-    width: 90%;
-  }
-
-  .about .text {
-    padding-left: 0;
-    gap: 1rem;
-  }
-
-  .results h2 {
-    text-align: left;
-    padding-left: 0;
-  }
-
-  .result {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    align-items: flex-start;
-  }
-
-  .result img:first-child {
-    align-self: center;
-    margin-bottom: 1rem;
-    max-width: 100px;
-  }
-
-  .result p {
-    text-align: left;
-    margin-bottom: 1rem;
-  }
-
-  .result img:last-child {
-    align-self: center;
-    margin-top: 1rem;
-  }
-
-  .contact {
-    align-items: flex-start;
-  }
-
-  .contact .info {
-    text-align: left;
-  }
-
-  .contact .contact-image {
-    width: 100%;
-    margin-top: 1rem;
-  }
-}
-
-/* DESKTOP: Column style results layout */
-@media (min-width: 769px) {
-  .result {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    align-items: start;
-  }
-
-  .result img:first-child {
-    grid-column: 1 / 2;
-  }
-
-  .result p {
-    grid-column: 1 / 2;
-  }
-
-  .result img:last-child {
-    grid-column: 2 / 3;
-    align-self: center;
-    justify-self: center;
-  }
-}
+  max-width: 800px;
+  margin: 0 auto;
+  gap:
