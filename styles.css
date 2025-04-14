@@ -6,15 +6,17 @@ body {
 }
 
 nav {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
   padding: 1rem;
 }
 
 nav a {
-  margin: 0 1.5rem;
   text-decoration: none;
   font-weight: bold;
-  color: #000;
+  color: black;
 }
 
 .hero {
@@ -24,44 +26,42 @@ nav a {
 
 .hero-image {
   max-width: 95%;
-  width: 100%;
 }
 
 .cards {
   display: flex;
-  justify-content: center;
   gap: 2rem;
-  padding: 2rem 0;
-  flex-wrap: nowrap;
   overflow-x: auto;
+  padding: 1rem 2rem;
 }
 
 .card {
-  text-align: left;
   min-width: 220px;
 }
 
-.card img {
-  width: 100%;
-  height: auto;
+.card p {
+  margin: 0.5rem 0 0;
+  font-size: 1rem;
 }
 
 .about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
+  padding: 1rem 2rem;
 }
 
 .about-image {
-  max-width: 90%;
+  width: 100%;
+  max-width: 900px;
+  display: block;
+  margin: auto;
 }
 
 .about-content {
   display: flex;
   align-items: flex-start;
+  margin-top: 1rem;
   max-width: 900px;
-  padding: 1rem;
+  margin-inline: auto;
 }
 
 .about-content .rotated {
@@ -69,18 +69,16 @@ nav a {
   transform-origin: left bottom;
   font-size: 2rem;
   font-weight: bold;
-  padding-right: 2rem;
+  margin-right: 2rem;
 }
 
 .about-content p {
-  margin-top: 0;
+  margin: 0;
   font-size: 1.2rem;
 }
 
 .results {
   padding: 2rem;
-  max-width: 1200px;
-  margin: auto;
 }
 
 .results h2 {
@@ -89,63 +87,50 @@ nav a {
   text-align: left;
 }
 
-.results-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem 2rem;
-}
-
-.result {
+.results-list {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  gap: 3rem;
+}
+
+.results-grid {
+  display: none;
 }
 
 .result-logo {
-  max-width: 120px;
-  margin-bottom: 1rem;
+  display: block;
+  margin: 0 auto 1rem;
+  max-height: 50px;
 }
 
 .result p {
+  text-align: center;
   margin-bottom: 1rem;
   max-width: 90%;
-  font-size: 1rem;
-  text-align: left;
+  margin-inline: auto;
 }
 
 .result-image {
   max-width: 100%;
   height: auto;
-}
-
-.result .paula {
-  padding: 0;
-  margin: 0;
+  display: block;
+  margin: 0 auto;
 }
 
 .contact {
-  max-width: 1200px;
-  margin: auto;
   padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 900px;
+  margin: auto;
   text-align: left;
 }
 
 .contact-info {
-  width: 100%;
-  max-width: 600px;
   margin-bottom: 1rem;
 }
 
-.contact h2 {
-  font-size: 2.5rem;
-}
-
-.contact-image {
-  max-width: 100%;
-  margin-top: 1rem;
+.contact a {
+  color: black;
+  text-decoration: none;
 }
 
 .linkedin {
@@ -153,42 +138,44 @@ nav a {
   margin-top: 0.5rem;
 }
 
-@media (min-width: 800px) {
+.contact-image {
+  width: 100%;
+  display: block;
+  margin: 1rem auto 0 auto;
+}
+
+@media (min-width: 900px) {
   .about {
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
 
-  .about-content {
-    flex-direction: row;
-  }
-
-  .contact {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-
-  .contact-image {
-    width: 50%;
-    margin-top: 0;
-  }
-
-  .cards {
-    overflow: visible;
-    justify-content: center;
-    flex-wrap: nowrap;
-  }
-
-  .hero-image {
-    max-width: 1100px;
+  .results-list {
+    display: none;
   }
 
   .results-grid {
-    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
   }
 
-  .result {
+  .result p {
+    text-align: center;
+  }
+
+  .contact {
+    display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .contact-info {
+    text-align: left;
+    max-width: 600px;
+  }
+
+  .contact-image {
+    max-width: 600px;
+    margin-top: 2rem;
   }
 }
