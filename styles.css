@@ -221,10 +221,14 @@ header {
     margin-bottom: 1rem;
   }
 
-  .result img:last-child {
-    order: 2;
-    margin-top: 1rem;
-  }
+ .result img:last-child {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+}
+
 
   .result-copy {
     align-items: flex-start;
