@@ -157,6 +157,7 @@ header {
 
 .result img:last-child {
   max-width: 100%;
+  width: 100%;
   height: auto;
   display: block;
 }
@@ -195,9 +196,12 @@ header {
 }
 
 .result-copy img {
-  max-width: 120px;
+  max-width: 150px;
+  width: 100%;
+  height: auto;
   margin-bottom: 1rem;
 }
+
 
 .result-copy p {
   max-width: 90%;
