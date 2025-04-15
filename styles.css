@@ -34,11 +34,6 @@ nav {
   font-weight: bold;
   flex-wrap: wrap;
 }
-@media (max-width: 768px) {
-  #about {
-    scroll-margin-bottom: 400px;
-  }
-}
 
 /* HEADER */
 header {
