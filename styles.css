@@ -34,6 +34,11 @@ nav {
   font-weight: bold;
   flex-wrap: wrap;
 }
+@media (max-width: 768px) {
+  #about {
+    scroll-margin-top: 80px;
+  }
+}
 
 /* HEADER */
 header {
@@ -179,20 +184,34 @@ header {
     gap: 1.5rem;
   }
 
-  .image-wrapper img {
-    width: 100%;
-    aspect-ratio: auto;
-  }
-
   .copy-wrapper {
+    order: 0;
     align-items: flex-start;
     text-align: left;
   }
 
+  .copy-wrapper img {
+    align-self: center; /* Center the logo */
+    margin-bottom: 1rem;
+  }
+
   .copy-wrapper p {
     max-width: 100%;
+    margin: 0;
+  }
+
+  .image-wrapper {
+    order: 2;
+  }
+
+  .image-wrapper img {
+    width: 100%;
+    aspect-ratio: auto;
   }
 }
+
+
+
 
 
 
