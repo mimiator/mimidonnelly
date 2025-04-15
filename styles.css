@@ -137,27 +137,95 @@ header {
 }
 
 .result {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
   margin-bottom: 4rem;
-  gap: 1rem;
 }
 
 .result img:first-child {
   max-width: 120px;
-  margin-bottom: 0.5rem;
+  margin: 0 auto 1rem auto;
+  display: block;
 }
 
 .result p {
   font-size: 1rem;
   text-align: left;
-  margin-bottom: 1rem;
 }
 
 .result img:last-child {
   max-width: 100%;
   height: auto;
-  margin-top: 0.5rem;
+  display: block;
+}
+
+/* Layout: alternating order every second row */
+.result:nth-child(odd) {
+  grid-template-areas: "image content";
+}
+
+.result:nth-child(odd) img:last-child {
+  grid-area: image;
+}
+
+.result:nth-child(odd) .result-copy {
+  grid-area: content;
+}
+
+.result:nth-child(even) {
+  grid-template-areas: "content image";
+}
+
+.result:nth-child(even) img:last-child {
+  grid-area: image;
+}
+
+.result:nth-child(even) .result-copy {
+  grid-area: content;
+}
+
+/* Content block */
+.result-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+.result-copy img {
+  max-width: 120px;
+  margin-bottom: 1rem;
+}
+
+.result-copy p {
+  max-width: 90%;
+}
+
+/* MOBILE STACKING */
+@media (max-width: 768px) {
+  .result {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .result img:first-child {
+    order: 0;
+    margin-bottom: 1rem;
+  }
+
+  .result img:last-child {
+    order: 2;
+    margin-top: 1rem;
+  }
+
+  .result-copy {
+    align-items: flex-start;
+    text-align: left;
+  }
 }
 
 /* CONTACT SECTION */
@@ -177,7 +245,7 @@ header {
 }
 
 .contact h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
 
@@ -215,21 +283,6 @@ header {
     gap: 1rem;
   }
 
-  .result {
-    flex-direction: column;
-  }
-
-  .result img:first-child {
-    align-self: center;
-  }
-
-  .result p {
-    text-align: left;
-  }
-
-  .result img:last-child {
-    align-self: center;
-  }
 
   .contact {
     align-items: flex-start;
