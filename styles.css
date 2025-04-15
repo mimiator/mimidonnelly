@@ -188,6 +188,51 @@ header {
 }
 
 /* Content block */
+.results {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.results h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.result {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+/* Ensures campaign images fill full column */
+.result img:last-child {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+}
+
+/* Consistent logo sizing */
+.result-copy img:first-child {
+  max-width: 150px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+/* Keep text tidy */
+.result-copy p {
+  max-width: 90%;
+  font-size: 1rem;
+  text-align: left;
+}
+
+/* Flex layout inside copy block */
 .result-copy {
   display: flex;
   flex-direction: column;
@@ -195,16 +240,29 @@ header {
   text-align: left;
 }
 
-.result-copy img {
-  max-width: 150px;
-  width: 100%;
-  height: auto;
-  margin-bottom: 1rem;
+/* Alternate row layouts */
+.result:nth-child(odd) {
+  grid-template-areas: "image content";
 }
 
+.result:nth-child(odd) img:last-child {
+  grid-area: image;
+}
 
-.result-copy p {
-  max-width: 90%;
+.result:nth-child(odd) .result-copy {
+  grid-area: content;
+}
+
+.result:nth-child(even) {
+  grid-template-areas: "content image";
+}
+
+.result:nth-child(even) img:last-child {
+  grid-area: image;
+}
+
+.result:nth-child(even) .result-copy {
+  grid-area: content;
 }
 
 /* MOBILE STACKING */
@@ -221,20 +279,27 @@ header {
     margin-bottom: 1rem;
   }
 
- .result img:last-child {
-  width: 100%;
-  height: auto;
-  display: block;
-  aspect-ratio: 4 / 3;
-  object-fit: contain;
-}
-
+  .result img:last-child {
+    order: 2;
+    margin-top: 1rem;
+    width: 100%;
+  }
 
   .result-copy {
     align-items: flex-start;
     text-align: left;
   }
+
+  .result-copy img:first-child {
+    max-width: 150px;
+    margin-bottom: 1rem;
+  }
+
+  .result-copy p {
+    max-width: 100%;
+  }
 }
+
 
 /* CONTACT SECTION */
 .contact {
