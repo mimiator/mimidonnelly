@@ -47,6 +47,8 @@ header {
   margin: 0 auto;
   text-align: center;
   padding: 1rem;
+  padding-bottom: 0; 
+  margin-bottom: 0;
 }
 
 
@@ -62,8 +64,9 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: -2rem;
-  margin-bottom: 0rem; 
+  margin-top: 0;
+  margin-bottom: 0; 
+  padding-top: 0;
 }
 
 .about img {
@@ -217,9 +220,17 @@ header {
 
 .contact .contact-image {
   width: 100%;
-  max-width: 700px;
   margin-top: 1.5rem;
   display: block;
+}
+
+ .fullwidth-img {
+  width: 100vw;
+  max-width: 100%;
+  margin-top: 2rem;
+  display: block;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
 }
 
 /* MEDIA QUERIES */
@@ -251,11 +262,4 @@ header {
   .contact .contact-image {
     margin-top: 1rem;
   }
-  .fullwidth-img {
-  width: 100vw;
-  max-width: 100%;
-  margin-top: 2rem;
-  display: block;
-}
-
 }
