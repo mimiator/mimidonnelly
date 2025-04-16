@@ -57,48 +57,12 @@ header {
   margin: 0 auto;
 }
 
-
-/* CRM CARDS */
-.cards {
-  display: flex;
-  justify-content: center;
-  gap: clamp(1rem, 5vw, 3rem); /* Dynamic spacing */
-  scroll-snap-type: x mandatory;
-  padding: 1rem 0 1rem;
-  max-width: 800px;
-  margin: 0 auto;
-  overflow-x: auto;
-  margin-bottom: 1rem;
-}
-
-.card {
-  min-width: 200px;
-  flex: 0 0 auto;
-  scroll-snap-align: start;
-  text-align: left;
-}
-
-.card img {
-  width: 200px;
-  height: auto;
-  object-fit: contain;
-  border-radius: 0;
-  margin-bottom: 0.25rem;
-}
-
-.card p {
-  text-align: left;
-  margin: 0;
-  padding-left: 0.25rem;
-  font-weight: normal;
-}
-
 /* ABOUT SECTION */
 .about {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 0rem;
+  margin-top: -2rem;
   margin-bottom: 0rem; 
 }
 
@@ -287,4 +251,11 @@ header {
   .contact .contact-image {
     margin-top: 1rem;
   }
+  .fullwidth-img {
+  width: 100vw;
+  max-width: 100%;
+  margin-top: 2rem;
+  display: block;
+}
+
 }
