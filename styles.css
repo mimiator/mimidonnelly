@@ -43,8 +43,10 @@ nav {
 
 /* HEADER */
 header {
-  max-width: 800px;
+  width: 100%;
+  max-width: 700px;
   margin: 0 auto;
+  display: block;
   text-align: center;
   padding: 1rem;
   padding-bottom: 0; 
@@ -196,10 +198,12 @@ header {
 
 .contact .info {
   max-width: 700px;
-  padding-left: 1.5rem; /* This shifts content slightly away from left edge */
+  padding-left: 2rem; /* Keeps it away from the edge */
   text-align: left;
-  margin: 0 auto;
+  margin-left: 0;
+  margin-right: auto;
 }
+
 
 
 .contact h2 {
@@ -246,12 +250,6 @@ header {
 
   .contact {
     align-items: flex-start;
-  }
-
-  .contact .info {
-    padding-left: 0;
-    text-align: left;
-    margin: 0;
   }
 
   .contact .contact-image {
