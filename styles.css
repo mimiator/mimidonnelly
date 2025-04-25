@@ -136,8 +136,10 @@ header {
 
 #video-section video {
   max-width: 700px;
-  margin: 0 auto;
+  width: 100%;
+  height: auto;
   display: block;
+  margin: 0 auto;
   padding: 0 1rem;
   box-sizing: border-box;
 }
