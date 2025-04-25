@@ -134,6 +134,14 @@ header {
   margin-top: -0.3rem;
 }
 
+#video-section video {
+  max-width: 700px;
+  margin: 0 auto;
+  display: block;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
 /* RESULTS SECTION */
 .results {
   padding: 2rem 1rem;
